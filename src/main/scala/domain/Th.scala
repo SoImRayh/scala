@@ -1,6 +1,9 @@
+package domain
+
 class Th extends Thread{
   override def run(): Unit = {
-    println("thread:  " + Thread.currentThread().getName )
+    printf("thread %s\n", Thread.currentThread().getName)
+
   }
   /*Recebe o ponteiro de duas matrizes e a resultante, calculando a multiplicação limitando as linhas contidas em
   * inferior e superior
@@ -35,5 +38,21 @@ class Th extends Thread{
       i = i + 1;
     }
   //printf("trabalho da thread: %s esta feito\n", Thread.currentThread().getName)
+  }
+
+  def adicionar(vetor: Array[Int]): Unit = {
+    printf("thread %s\n", Thread.currentThread().getName)
+
+    for(x <- 0 to 100000){
+      vetor(1) += 1;
+    }
+  }
+
+  def subtrair(vetor: Array[Int]): Unit = {
+    printf("thread %s", Thread.currentThread().getName)
+
+    for(x <- 0 to 10){
+      vetor(1) -= 1;
+    }
   }
 }

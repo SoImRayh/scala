@@ -1,3 +1,4 @@
+import domain.Th
 
 object Main extends App {
   // padroes setando a quantidade de linhas e colunas(lc) e numero de threads(thnum)
